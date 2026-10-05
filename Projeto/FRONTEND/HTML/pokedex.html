@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de CEP</title>
-    <link rel="stylesheet" href="FRONTEND/CSS/cep.css">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="FRONTEND/CSS/pokedex.css">
 </head>
+
 <body>
      <header>
         <h1>PORTFÓLIO SILVARI</h1> <!-- título do portfólio -->
@@ -28,29 +30,25 @@
         </nav>
     </header>
     <main id="container">
-        <section id="img">
-            <img src="Assests/undraw_map-dark_g9xq.svg" alt="">
-        </section>
-        <section id="formulario">
-            <h1>Buscador de CEP</h1>
-            <form id="Form">
-                <label for="cep">Digite o CEP:</label>
-                <input type="text" id="cep" name="cep" maxlength="9" placeholder="01001-000" required>
-                <button type="submit">Buscar</button>
-            </form>
-       
+        <h1>POKEDEX</h1>
+        <form id="form">
+            <label for="input">Digite o Pokemon</label>
+            <input type="text" id="input" placeholder="Pikachu ou 25" required>
+            <button type="submit">BUSCAR</button>
+        </form>
+
         <div id="info">
             <p><span id="resultado"></span></p>
-            <p>Rua: <span id="rua"></span></p>
-            <p>Bairro: <span id="bairro"></span></p>
-            <p>Cidade: <span id="cidade"></span></p>
-            <p>UF: <span id="uf"></span></p>
+            <img id="img" src="" alt="">
+            <p class="caixa">Nome: <span id="nome"></span></p>
+            <p class="caixa">Número: <span id="numero"></span></p>
+            <p class="caixa">Tipo: <span id="tipo"></span></p>
+            <p class="caixa">Status: <span id="status"></span></p>
         </div>
-         </section>
     </main>
-    <footer><!-- rodapé -->
+     <footer><!-- rodapé -->
         <p>&copy; 2026 Meu Portfólio. Todos os direitos reservados.</p>
     </footer>
-    <script src="FRONTEND/JS/cep.js"></script>
+    <script src="FRONTEND/JS/pokedex.js"></script>
 </body>
 </html>

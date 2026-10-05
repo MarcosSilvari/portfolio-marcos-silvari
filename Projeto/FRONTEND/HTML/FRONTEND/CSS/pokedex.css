@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
 }
 
-
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #0d0b14;
     color: #eee;
-    overflow-x: hidden;
-
 }
 
 body::before {
@@ -212,208 +210,182 @@ button:hover {
     box-shadow: 0 0 15px rgba(225, 78, 255, 0.8);
 }
 
-
+/* ===== Card ===== */
 #container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 50px;
-}
-
-
-#img {
-    width: 100%;
-    max-width: 380px;
-}
-
-#img img {
-    width: 100%;
-    height: 100%;
-    max-height: 520px;
-    object-fit: cover;
-
-}
-
-@media (max-width: 800px) {
-    #container {
-        flex-direction: column;
-    }
-
-    #img img {
-        max-height: 250px;
-    }
-}
-
-/* ícones dentro dos inputs */
-.input-field i,
-.input-field svg,
-.input-field img {
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    color: #b388ff;
-    fill: #b388ff;
-    flex-shrink: 0;
-}
-
-/* ícone do link "mais informações" */
-#mais-info i,
-#mais-info svg,
-#mais-info img {
-    width: 16px;
-    height: 16px;
-    font-size: 16px;
-    color: #b388ff;
-    fill: #b388ff;
-    vertical-align: middle;
-    margin-left: 4px;
-}
-
-#calcular {
-    width: 100%;
-    max-width: 380px;
+    width: min(calc(100% - 40px), 420px);
+    margin: auto;
     background: #1a1626;
     padding: 32px;
     border-radius: 16px;
-    box-shadow: 0 0 20px rgba(180, 60, 255, 0.25);
+    box-shadow: 0 0 20px rgba(160, 32, 240, 0.3);
 }
 
-h1 {
-    font-size: 1.3rem;
+#container h1 {
     text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
     margin-bottom: 24px;
-    color: #d38bff;
+    color: #e14eff;
+    text-shadow: 0 0 10px rgba(225, 78, 255, 0.7);
 }
 
-.input-box {
-    margin-bottom: 16px;
-}
-
-label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 0.9rem;
-}
-
-.input-field {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #0d0b14;
-    border: 1px solid #4a3a6a;
-    border-radius: 8px;
-    padding: 0 12px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.input-field:focus-within {
-    border-color: #e040fb;
-    box-shadow: 0 0 10px rgba(224, 64, 251, 0.5);
-}
-
-input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    padding: 12px 0;
-    font-size: 1rem;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
-    appearance: textfield;
-}
-
-button.calcular {
-    width: 100%;
+#container button {
+    margin-top: 6px;
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background: linear-gradient(90deg, #8e2de2, #e040fb);
+    background: linear-gradient(90deg, #8e2de2, #e14eff);
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
-#info {
-    margin-top: 24px;
+#container button:hover {
+    background: linear-gradient(90deg, #8e2de2, #e14eff);
+    color: #fff;
+    box-shadow: 0 0 16px #e14eff;
+    transform: translateY(-2px);
 }
 
-#resultado {
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    color: #e14eff;
+    text-shadow: 0 0 10px rgba(225, 78, 255, 0.7);
+}
+
+/* ===== Formulário ===== */
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 20px;
+    gap: 10px;
+}
+
+label {
+    font-size: 0.9rem;
+}
+
+input {
+    background: #0d0b14;
+    border: 1px solid #4a3a6a;
+    border-radius: 8px;
+    padding: 12px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #e14eff;
+    box-shadow: 0 0 10px rgba(225, 78, 255, 0.5);
+}
+
+button {
+    margin-top: 6px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #8e2de2, #e14eff);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+button:hover {
+    box-shadow: 0 0 16px #e14eff;
+    transform: translateY(-2px);
+}
+
+/* ===== Resultado ===== */
+#info {
+    margin-top: 24px;
+    padding: 16px;
     background: #0d0b14;
     border: 1px solid #4a3a6a;
     border-radius: 12px;
-    box-shadow: inset 0 0 20px rgba(142, 45, 226, 0.15);
-}
-
-/* só aparece depois de calcular */
-#resultado:has(#values:empty) {
-    display: none;
-}
-
-#imc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1;
-}
-
-#values {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #e040fb;
-    text-shadow: 0 0 15px rgba(224, 64, 251, 0.7);
-}
-
-#imc span:last-child {
-    margin-top: 8px;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #9a8bb5;
-}
-
-#descricao span {
-    display: inline-block;
-    padding: 6px 16px;
-    border-radius: 999px;
-    background: rgba(224, 64, 251, 0.15);
-    border: 1px solid #e040fb;
-    color: #f3c6ff;
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-#mais-info {
-    margin-top: 16px;
     text-align: center;
 }
 
-#mais-info a {
-    color: #b388ff;
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: color 0.2s, text-shadow 0.2s;
+#info:has(#nome:empty):has(#resultado:empty) {
+    display: none;
 }
 
-#mais-info a:hover {
-    color: #e040fb;
-    text-shadow: 0 0 8px rgba(224, 64, 251, 0.6);
+#info p {
+    margin: 6px 0;
+    color: #9a8bb5;
+}
+
+#info span {
+    color: #f3c6ff;
+    font-weight: 600;
+}
+
+#nome {
+    text-transform: capitalize;
+}
+
+#tipo {
+    text-transform: uppercase;
+    color: #e14eff;
+    letter-spacing: 1px;
+}
+
+/* mensagem de erro */
+#resultado {
+    color: #ff6ec7;
+}
+
+.caixa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+    padding: 10px 16px;
+    border: 1px solid #e14eff;
+    border-radius: 8px;
+    background: rgba(225, 78, 255, 0.08);
+    color: #d9b8ff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(225, 78, 255, 0.35),
+                inset 0 0 8px rgba(225, 78, 255, 0.15);
+    cursor: default;
+}
+
+.caixa span {
+    text-align: right;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(225, 78, 255, 0.8);
+}
+
+/* esconde as caixas enquanto não tem resultado */
+.caixa:has(span:empty) {
+    display: none;
+}
+
+#status {
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* imagem do pokémon */
+#img {
+    width: 160px;
+    height: 160px;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 12px rgba(225, 78, 255, 0.6));
+}
+
+/* esconde a imagem enquanto não tem src (evita ícone quebrado) */
+#img[src=""] {
+    display: none;
 }
 
 footer {
@@ -426,7 +398,7 @@ footer {
     border-top: 1px solid #2e0f3d;
 }
 
-/* ===== Responsivo ===== */
+
 @media (max-width: 600px) {
     header {
         flex-direction: column;
