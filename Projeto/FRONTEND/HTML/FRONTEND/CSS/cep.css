@@ -220,11 +220,13 @@ button:hover {
 
 /* ===== Imagem ===== */
 #img {
+    
     width: 100%;
     max-width: 420px;
 }
 
 #img img {
+    
     width: 100%;
     height: auto;
     max-height: 420px;

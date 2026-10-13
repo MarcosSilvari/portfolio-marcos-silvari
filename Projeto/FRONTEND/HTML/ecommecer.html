@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="FRONTEND/CSS/ecommecer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>Loja Virtual</h1>
+        <i class="fa-solid fa-magnifying-glass"></i><input type="text"  placeholder="Pesquisar" id="pesquisar">
+        <ul>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Categorias</a></li>
+        </ul>
+        <button id="home"><i class="fa-solid fa-home"></i><a href="file:///C:/Users/DL/Desktop/pasta%20de%20login/index.html"> Inicio</a></button>
+    </header>
+
+    <section id="produtos">
+        <h2><i class="fa-brands fa-product-hunt"></i> Produtos em Destaque</h2>
+
+        <select id="filtro">
+            <option value="todos">Todas as categorias</option>
+        </select>
+
+        <div id="lista-produtos">
+            <div class="produto">
+            </div>
+        </div>
+    </section>
+    <aside id="carrinho-lateral">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Carrinho:</h2>
+        <ul id="itens-carrinho"></ul>
+        <p>Total compras: <span id="total-compras"></span></p>
+    </aside>
+
+    <script src="FRONTEND/JS/ecommecer.js"></script>
+</body>
+</html>
