@@ -11,30 +11,36 @@
 
 <body>
     <header>
-        <h1>PORTFÓLIO SILVARI</h1> <!-- título do portfólio -->
-        <nav>
-            <ul><!-- menu de navegação -->
-                <li><a href="file:///C:/Users/DL/Desktop/pasta%20de%20login/index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Projetos ▾</a>
-                        <ul class="submenu">
-                            <li><a href="list.html">Lista de tarefa</a></li>
-                            <li><a href="imc.html">Calculadora de IMC</a></li>
-                            <li><a href="cep.html">Buscador de CEP</a></li>
-                            <li><a href="pokedex.html">Pokedex</a></li>
-                            <li><a href="ecommecer.html">E-commerce</a></li>
+    <h1>PORTFÓLIO SILVARI</h1> 
+ 
+    
+    <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+ 
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Projetos ▾</a>
+                <ul class="submenu">
+                    <li><a href="list.html">Lista de tarefa</a></li>
+                    <li><a href="imc.html">Calculadora de IMC</a></li>
+                    <li><a href="cep.html">Buscador de CEP</a></li>
+                    <li><a href="pokedex.html">Pokedex</a></li>
+                    <li><a href="ecommecer.html">E-commerce</a></li>
+                </ul>
+            </li>
 
-                        </ul>
-                </li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="login.html"><button>Entrar</button></a></li>
-            </ul>
-        </nav>
-    </header>
+            <li><a href="login.html" class="btn-entrar">Entrar</a></li>
+        </ul>
+    </nav>
+</header>
     <main id="container">
         <section id="img">
-            <img src="Assests/undraw_healthy-habit_2ata (2).svg" alt="">
+            <img src="Projeto/FRONTEND/HTML/Assests/undraw_healthy-habit_2ata (2).svg" alt="">
         </section>
         <section id="calcular">
             <form id="form">

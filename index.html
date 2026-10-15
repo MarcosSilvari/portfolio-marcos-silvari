@@ -7,33 +7,38 @@
     <link rel="stylesheet" href="Projeto/FRONTEND/HTML/FRONTEND/CSS/style.css">
 </head>
 <body>
-    <header>
-        <h1>PORTFÓLIO SILVARI</h1> <!-- título do portfólio -->
-        <nav>
-            <ul><!-- menu de navegação -->
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Projetos ▾</a>
-                    <ul class="submenu">
-                        <li><a href="list.html">Lista de tarefa</a></li>
-                        <li><a href="imc.html">Calculadora de IMC</a></li>
-                        <li><a href="cep.html">Buscador de CEP</a></li>
-                        <li><a href="pokedex.html">Pokedex</a></li>
-                        <li><a href="ecommecer.html">E-commerce</a></li>
-                    </ul>
-                </li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="login.html"><button>Entrar</button></a></li>
-            </ul>
-        </nav>
-    </header>
-    <main><!-- conteúdo principal -->
+   <header>
+    <h1>PORTFÓLIO SILVARI</h1> 
+ 
+    <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+ 
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Projetos ▾</a>
+                <ul class="submenu">
+                    <li><a href="list.html">Lista de tarefa</a></li>
+                    <li><a href="imc.html">Calculadora de IMC</a></li>
+                    <li><a href="cep.html">Buscador de CEP</a></li>
+                    <li><a href="pokedex.html">Pokedex</a></li>
+                    <li><a href="ecommecer.html">E-commerce</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html" class="btn-entrar">Entrar</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
         <section class="apresentacao">
     <h2>Bem-vindo ao meu Portfólio</h2>
     <p>Sou <span class="nome-destaque">Marcos Silari</span>, estudante de Análise e Desenvolvimento de Sistemas (ADS) na Cruzeiro do Sul, apaixonado por transformar código em soluções reais. Este portfólio reúne os projetos práticos que venho desenvolvendo — de bancos de dados a sistemas web completos.</p>
-</section><!-- seção de apresentação -->
-        <section class="projetos"><!-- seção de projetos -->
+</section>
+        <section class="projetos">
             <h2>Projetos</h2>
             <ul>
                 <li>Projeto 1</li>
@@ -218,4 +223,6 @@
     <footer><!-- rodapé -->
         <p>&copy; 2026 Meu Portfólio. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="Projeto/FRONTEND/HTML/FRONTEND/JS/script.js"></script>
 </body>
