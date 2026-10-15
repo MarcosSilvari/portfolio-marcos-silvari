@@ -2,6 +2,12 @@
 
 Portfólio pessoal desenvolvido por **Marcos Silvari**, estudante de **Análise e Desenvolvimento de Sistemas (ADS)** na **Cruzeiro do Sul**. O site reúne projetos práticos desenvolvidos ao longo do curso, com um visual escuro e neon (tons de roxo/magenta) e efeitos de brilho ao interagir com a interface.
 
+# SITE WEB:
+
+https://portfolio-silvari.vercel.app/
+
+Verifique o site do meu portfólio para ver as atualizações e como ele é!!!
+
 ## 🔗 Sobre o projeto
 
 Este repositório contém o código-fonte do meu site de portfólio, construído com **HTML** e **CSS puro**, sem frameworks front-end. O objetivo é apresentar meus projetos de forma visual e interativa, servindo também como vitrine das minhas habilidades em desenvolvimento web, banco de dados e back-end.
