@@ -1,228 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="Projeto/FRONTEND/HTML/FRONTEND/CSS/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Esfera Neon</title>
+<link rel="stylesheet" href="Projeto/FRONTEND/HTML/FRONTEND/CSS/esfera.css">
 </head>
 <body>
-   <header>
-    <h1>PORTFÓLIO SILVARI</h1> 
- 
-    <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+
+  <!-- href = para onde vai depois do clique. Troque pelo endereço da sua página inicial -->
+  <a class="link" id="link" href="home.html" aria-label="Entrar no site">
+
+    <!-- .orbe = caixa que guarda a esfera e todos os efeitos em volta dela -->
+    <div class="orbe" id="orbe">
+
+      <!-- Ondas de energia que se expandem para fora -->
+      <div class="onda"></div>
+      <div class="onda atraso"></div>
+
+      <!-- Anéis de luz girando em volta (cada um em um sentido) -->
+      <div class="anel anel1"></div>
+      <div class="anel anel2"></div>
+
+      <!-- Faíscas orbitando (cada .orbita gira e carrega uma bolinha de luz) -->
+      <div class="orbita o1"></div>
+      <div class="orbita o2"></div>
+      <div class="orbita o3"></div>
+
+      <!-- A esfera em si, com a energia por dentro -->
+      <div class="esfera">
+        <div class="plasma"></div>
+        <div class="nucleo"></div>
+        <div class="reflexo"></div>
+      </div>
+
+      <!-- Texto no centro da esfera (fica por cima de tudo) -->
+      <span class="entrar">ENTRAR</span>
+
     </div>
- 
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="#">Projetos ▾</a>
-                <ul class="submenu">
-                    <li><a href="list.html">Lista de tarefa</a></li>
-                    <li><a href="imc.html">Calculadora de IMC</a></li>
-                    <li><a href="cep.html">Buscador de CEP</a></li>
-                    <li><a href="pokedex.html">Pokedex</a></li>
-                    <li><a href="ecommecer.html">E-commerce</a></li>
-                </ul>
-            </li>
-            <li><a href="login.html" class="btn-entrar">Entrar</a></li>
-        </ul>
-    </nav>
-</header>
-    <main>
-        <section class="apresentacao">
-    <h2>Bem-vindo ao meu Portfólio</h2>
-    <p>Sou <span class="nome-destaque">Marcos Silari</span>, estudante de Análise e Desenvolvimento de Sistemas (ADS) na Cruzeiro do Sul, apaixonado por transformar código em soluções reais. Este portfólio reúne os projetos práticos que venho desenvolvendo — de bancos de dados a sistemas web completos.</p>
-</section>
-        <section class="projetos">
-            <h2>Projetos</h2>
-            <ul>
-                <li>Projeto 1</li>
-                <h1>Projeto 1 — Fundamentos de SQL com HTML</h1>
-                        <p>Aplicação prática dos comandos essenciais de SQL (CREATE TABLE, INSERT INTO, INNER JOIN, UPDATE e DELETE), com o código exibido junto do resultado correspondente.</p>
+  </a>
 
-                        <div class="secao">
-                            <h2>1. CREATE TABLE — criando as tabelas</h2>
-                            <pre><code>CREATE TABLE clientes (
-                        id INT PRIMARY KEY,
-                        nome VARCHAR(100),
-                        email VARCHAR(100)
-                    );
+<script src="Projeto/FRONTEND/HTML/FRONTEND/JS/esfera.js"></script>
 
-                    CREATE TABLE pedidos (
-                        id INT PRIMARY KEY,
-                        cliente_id INT,
-                        produto VARCHAR(100),
-                        valor DECIMAL(10,2),
-                        FOREIGN KEY (cliente_id) REFERENCES clientes(id)
-                    );</code></pre>
-                        </div>
-
-                        <div class="secao">
-                            <h2>2. INSERT INTO — inserindo dados</h2>
-                            <pre><code>INSERT INTO clientes (id, nome, email) VALUES
-                    (1, 'Maria Silva', 'maria@email.com'),
-                    (2, 'João Souza', 'joao@email.com');
-
-                    INSERT INTO pedidos (id, cliente_id, produto, valor) VALUES
-                    (1, 1, 'Notebook', 3500.00),
-                    (2, 2, 'Mouse', 80.00);</code></pre>
-
-                            <p class="resultado">ID: 1 | Nome: Maria Silva | Email: maria@email.com</p>
-                            <p class="resultado">ID: 2 | Nome: João Souza | Email: joao@email.com</p>
-                        </div>
-
-                        <div class="secao">
-                            <h2>3. INNER JOIN — juntando as tabelas</h2>
-                            <pre><code>SELECT clientes.nome, pedidos.produto, pedidos.valor
-                    FROM clientes
-                    INNER JOIN pedidos ON clientes.id = pedidos.cliente_id;</code></pre>
-
-                            <p class="resultado">Maria Silva comprou um Notebook no valor de R$ 3.500,00</p>
-                            <p class="resultado">João Souza comprou um Mouse no valor de R$ 80,00</p>
-                        </div>
-
-                        <div class="secao">
-                            <h2>4. UPDATE — atualizando um registro</h2>
-                            <pre><code>UPDATE clientes
-                    SET email = 'maria.silva@email.com'
-                    WHERE id = 1;</code></pre>
-
-                            <p class="resultado">ID: 1 | Nome: Maria Silva | Email: maria.silva@email.com (atualizado)</p>
-                        </div>
-
-                        <div class="secao">
-                            <h2>5. DELETE — removendo um registro</h2>
-                            <pre><code>DELETE FROM pedidos WHERE id = 2;</code></pre>
-
-                            <p class="resultado">Pedido #1 - Cliente: Maria Silva - Produto: Notebook - Valor: R$ 3.500,00</p>
-                            <p><em>(Pedido #2 foi removido)</em></p>
-                        </div>
-                <li>Projeto 2</li>
-                        <h1>Projeto 2 — Sistema de Login com Python, SQL e Front-end</h1>
-                    <p>Aplicação web desenvolvida com <strong>Flask</strong> e <strong>SQLite</strong>, implementando cadastro e autenticação de usuários com armazenamento seguro de senhas (hash) e formulários HTML integrados ao back-end.</p>
-
-                    <div class="tags">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>SQLite</span>
-                        <span>HTML</span>
-                        <span>Autenticação</span>
-                        <span>Segurança</span>
-                    </div>
-
-                    <div class="secao">
-                        <h2>1. Banco de Dados (SQL)</h2>
-                        <pre><code>CREATE TABLE usuarios (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    usuario TEXT UNIQUE NOT NULL,
-                    senha TEXT NOT NULL
-                );</code></pre>
-                    </div>
-
-                    <div class="secao">
-                        <h2>2. Back-end (Python / Flask)</h2>
-                        <pre><code>from flask import Flask, render_template, request, redirect
-                import sqlite3
-                from werkzeug.security import generate_password_hash, check_password_hash
-
-                app = Flask(__name__)
-
-                @app.route('/cadastro', methods=['GET', 'POST'])
-                def cadastro():
-                    if request.method == 'POST':
-                        usuario = request.form['usuario']
-                        senha = generate_password_hash(request.form['senha'])
-
-                        conn = sqlite3.connect('banco.db')
-                        cursor = conn.cursor()
-                        cursor.execute("INSERT INTO usuarios (usuario, senha) VALUES (?, ?)", (usuario, senha))
-                        conn.commit()
-                        conn.close()
-                        return redirect('/login')
-
-                    return render_template('cadastro.html')
-
-
-                @app.route('/login', methods=['GET', 'POST'])
-                def login():
-                    if request.method == 'POST':
-                        usuario = request.form['usuario']
-                        senha = request.form['senha']
-
-                        conn = sqlite3.connect('banco.db')
-                        cursor = conn.cursor()
-                        cursor.execute("SELECT senha FROM usuarios WHERE usuario = ?", (usuario,))
-                        resultado = cursor.fetchone()
-                        conn.close()
-
-                        if resultado and check_password_hash(resultado[0], senha):
-                            return "Login realizado com sucesso!"
-                        else:
-                            return "Usuário ou senha incorretos."
-
-                    return render_template('login.html')
-
-
-                if __name__ == '__main__':
-                    app.run(debug=True)</code></pre>
-                    </div>
-
-                    <div class="secao">
-                        <h2>3. Front-end (HTML do Login)</h2>
-                        <pre><code>&lt;!DOCTYPE html&gt;
-                &lt;html lang="pt-br"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;title&gt;Login&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;h2&gt;Login&lt;/h2&gt;
-                    &lt;form method="POST"&gt;
-                        &lt;label for="usuario"&gt;Usuário:&lt;/label&gt;
-                        &lt;input type="text" name="usuario" id="usuario" required&gt;&lt;br&gt;
-
-                        &lt;label for="senha"&gt;Senha:&lt;/label&gt;
-                        &lt;input type="password" name="senha" id="senha" required&gt;&lt;br&gt;
-
-                        &lt;button type="submit"&gt;Entrar&lt;/button&gt;
-                    &lt;/form&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;</code></pre>
-                    </div>
-                <li>Projeto 3</li>
-                    <div class="card">
-                        <div class="icone">🚧</div>
-                        <h1>Projeto 3</h1>
-                        <p>Em breve sairá o Projeto 3 do meu portfólio!</p>
-                        <p>Fique de olho — novidades em desenvolvimento.</p>
-                        <div class="tags">
-                            <span>Em construção</span>
-                        </div>
-                    </div>
-            </ul>
-        </section><!-- seção de projetos -->
-        <section class="contato"><!-- seção de contato -->
-            <h2>Contato</h2>
-            <p>Entre em contato comigo através do formulário de contato.</p>
-            <p>Ou clique no botão abaixo para enviar um e-mail.</p>
-            <button class="email-button" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=marcossilvarisantos972@gmail.com', '_blank')">Enviar E-mail</button>
-
-        </section><!-- seção de contato -->
-        <section><!-- seção de login -->
-            <h2>Login</h2>
-            <p>Faça login para acessar recursos exclusivos.</p>
-            <p>Ou clique no botão abaixo para ir para a página de login.</p>
-            <button class="login-button" onclick="window.location.href='login.html'">Ir para Login</button>
-        </section><!-- seção de login -->
-    </main><!-- conteúdo principal -->
-    <footer><!-- rodapé -->
-        <p>&copy; 2026 Meu Portfólio. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="Projeto/FRONTEND/HTML/FRONTEND/JS/script.js"></script>
 </body>
+</html>
