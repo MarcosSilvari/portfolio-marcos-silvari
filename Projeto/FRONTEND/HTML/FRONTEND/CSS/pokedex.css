@@ -652,6 +652,46 @@ footer {
     border-top: 1px solid #2e0f3d;
 }
 
+.botoes-flutuantes {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 20;
+    display: flex;
+    gap: 12px;
+}
+
+/* cada botão só cuida do próprio visual */
+.botao-flutuante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+#whatsapp{
+    background-color: green;
+}
+
+#github{
+    background-color: black;
+}
+
+.botao-flutuante:hover, #whatsapp:hover, #github:hover {
+    transform: scale(1.08);
+    background-color: #a020f0;
+    box-shadow: 0 0 15px rgba(225, 78, 255, 0.8);
+}
 
 @media (max-width: 600px) {
     header {
