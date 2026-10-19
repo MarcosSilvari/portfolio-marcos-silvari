@@ -83,7 +83,7 @@ pip install flask werkzeug
 python app.py
 ```
 
-Depois acesse `http://localhost:5000/login` no navegador.
+Depois acesse https://portfolio-marcos-silvari.vercel.app/login.html no navegador.
 
 ## 🛠️ Tecnologias utilizadas
 
