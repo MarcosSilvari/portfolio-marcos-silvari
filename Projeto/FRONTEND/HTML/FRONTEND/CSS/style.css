@@ -702,3 +702,166 @@ footer {
         justify-content: center;
     }
 }
+
+/* ===== NOVAS SEÇÕES DA HOME (cole no final do style.css) ===== */
+
+/* títulos pequenos (h3) dentro das novas seções */
+.habilidades h3,
+.card-projeto h3 {
+    color: #f0eaf5;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+/* ----- Botões em forma de link ----- */
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contato .hero-botoes {
+    justify-content: center;
+}
+
+.contato .email-button {
+    margin-top: 0;
+}
+
+.btn-neon {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(225, 78, 255, 0.22), rgba(20, 7, 26, 0.45));
+    border: 1px solid #e14eff;
+    box-shadow: 0 0 20px rgba(160, 32, 240, 0.4);
+    color: #f7f4f7;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-neon-vazio {
+    background: transparent;
+    box-shadow: none;
+    color: #e14eff;
+}
+
+.btn-neon:hover {
+    background-color: #e14eff;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(225, 78, 255, 0.8);
+}
+
+.link-neon {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff6ec7;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.link-neon:hover {
+    color: #ff8ef9;
+    text-shadow: 0 0 10px rgba(225, 78, 255, 0.9);
+}
+
+/* ----- Números de destaque ----- */
+.numeros {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.numeros li {
+    background-color: #160a1f;
+    border: 1px solid #4b0e63;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.numeros li:hover {
+    border-color: #e14eff;
+    box-shadow: 0 0 20px rgba(225, 78, 255, 0.35);
+}
+
+.numeros strong {
+    display: block;
+    font-size: 32px;
+    color: #e14eff;
+    text-shadow: 0 0 8px rgba(225, 78, 255, 0.7);
+}
+
+.numeros span {
+    font-size: 14px;
+    color: #cfc4d9;
+}
+
+/* ----- Sobre resumido ----- */
+.sobre-resumo p {
+    color: #cfc4d9;
+}
+
+/* ----- Tecnologias ----- */
+.grupo-skills {
+    margin-bottom: 15px;
+}
+
+/* ----- Cards de projetos ----- */
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+    gap: 20px;
+}
+
+.card-projeto {
+    display: flex;
+    flex-direction: column;
+    background-color: #160a1f;
+    border: 1px solid #4b0e63;
+    border-radius: 8px;
+    padding: 18px 20px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-projeto:hover {
+    border-color: #e14eff;
+    box-shadow: 0 0 20px rgba(225, 78, 255, 0.35);
+}
+
+.card-projeto p {
+    color: #cfc4d9;
+    font-size: 15px;
+}
+
+.card-projeto .link-neon {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.card-em-breve {
+    background-color: #14071a;
+    border: 2px dashed #a020f0;
+}
+
+/* ----- Como eu trabalho ----- */
+.passos {
+    padding-left: 22px;
+    color: #cfc4d9;
+}
+
+.passos li {
+    margin-bottom: 10px;
+}
+
+.passos strong {
+    color: #ff6ec7;
+}
