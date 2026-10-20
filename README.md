@@ -83,7 +83,7 @@ pip install flask werkzeug
 python app.py
 ```
 
-Depois acesse `http://localhost:5000/login` no navegador.
+Depois acesse no navegador!
 
 ## 🛠️ Tecnologias utilizadas
 
